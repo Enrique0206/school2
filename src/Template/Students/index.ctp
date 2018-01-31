@@ -17,8 +17,9 @@
     </ul>
 </nav>
 <div class="students index large-9 medium-8 columns content">
-    <h3><?= __('Students') ?></h3>
-    <table cellpadding="0" cellspacing="0">
+    <h3><?= __('Estudiantes') ?></h3>
+	<div class="table-responsive">
+		<table class="table">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
@@ -42,14 +43,15 @@
                 <td><?= h($student->sexo) ?></td>
                 <td><?= $student->has('boss') ? $this->Html->link($student->boss->name, ['controller' => 'Bosses', 'action' => 'view', $student->boss->id]) : '' ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $student->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $student->id]) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $student->id], ['class' => 'btn btn-success']) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $student->id], ['class' => 'btn btn-warning']) ?>
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $student->id], ['confirm' => __('Are you sure you want to delete # {0}?', $student->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
+</div>
     <div class="paginator">
         <ul class="pagination">
             <?= $this->Paginator->first('<< ' . __('first')) ?>
@@ -60,4 +62,7 @@
         </ul>
         <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
     </div>
+	
+	<div style="list-style: none"><li><?= $this->Html->link(__('Nuevo Estudiante'), ['action' => 'add'], ['class' => 'btn btn-primary']) ?></li></div>
+	
 </div>

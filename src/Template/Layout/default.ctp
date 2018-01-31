@@ -55,22 +55,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 				<!--items menu-->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li><a class="items" href="#">INICIO</a></li>							
-						<li class="dropdown">
-						  <a class="items" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">EMPLEADOS<span class="caret"></span></a>
-						  <ul class="dropdown-menu">
-							<li><a href="#">Profesores</a></li>
-							<li><a href="#">Auxiliares</a></li>													
-						  </ul>
-						</li>
-					    <li class="dropdown">
-						  <a class="items" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ESTUDIANTES<span class="caret"></span></a>
-						  <ul class="dropdown-menu">
-							<li><a href="#">Primaria</a></li>
-							<li><a href="#">Secundaria</a></li>													
-						  </ul>
-						</li>
-						<li><a class="items" href="#">CURSOS</a></li>
+						<li><?= $this->Html->link(__('MENU'), ['controller' => 'Home', 'action' => 'index'], ['class' => 'items'])?></li>	
+						<li><?= $this->Html->link('APODERADOS', ['controller' => 'Bosses', 'action' => 'index'], ['class' => 'items']) ?></li>						
+					    <li><?= $this->Html->link('ESTUDIANTES', ['controller' => 'Students', 'action' => 'index'], ['class' => 'items']) ?></li>
+						<li><?= $this->Html->link('CURSOS', ['controller' => 'Courses', 'action' => 'index'], ['class' => 'items']) ?></li>
+						<li><a class="items" href="#">NOTAS</a></li>
 					  </ul>  
 
 					  <ul class="nav navbar-nav navbar-right">
@@ -80,11 +69,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 				<!--items menu-->
 			</div>
 		</nav>
-	
-		<div class="container">
-			<?= $this->Flash->render() ?>
+	<div class="container-fluid" style="height: 20px"></div>
+		<div class="container">			
+				<?= $this->Flash->render() ?>
 
-			<?= $this->fetch('content') ?>
+				<?= $this->fetch('content') ?>
+			</div>
 	    </div>
 </body>
 </html>

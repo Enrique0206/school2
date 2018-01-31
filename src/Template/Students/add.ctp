@@ -16,19 +16,37 @@
         <li><?= $this->Html->link(__('New Score'), ['controller' => 'Scores', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="students form large-9 medium-8 columns content">
-    <?= $this->Form->create($student) ?>
-    <fieldset>
-        <legend><?= __('Add Student') ?></legend>
-        <?php
-            echo $this->Form->control('name');
-            echo $this->Form->control('code');
-            echo $this->Form->control('address');
-            echo $this->Form->control('dni');
-            echo $this->Form->control('sexo');
-            echo $this->Form->control('boss_id', ['options' => $bosses]);
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<?= $this->Form->create($student) ?>
+			<fieldset>
+				<legend><?= __('Ingresar Nuevo Estudiante') ?></legend>
+				<?php
+					echo $this->Form->control('name', ['class' => 'form-control']);
+					echo $this->Form->control('code', ['class' => 'form-control']);
+					echo $this->Form->control('address', ['class' => 'form-control']);
+					echo $this->Form->control('dni', ['class' => 'form-control']);
+					echo $this->Form->control('sexo', ['class' => 'form-control']);
+					echo $this->Form->control('boss_id', ['class' => 'form-control'], ['options' => $bosses]);
+				?>
+			</fieldset>
+		</div>
+	</div>	   
 </div>
+
+<div class="container" style="margin-top: 20px">
+	<div class="row">
+		<div class="col-md-4">
+			<?= $this->Form->button(__('Guardar'), ['class' => 'btn btn-success'], ['action' => 'index']) ?>
+			<?= $this->Form->end() ?>
+		</div>		
+		<div class="col-md-4">
+			<?= $this->Html->link(__('regresar'), ['action' => 'index'], ['class' => 'btn btn-info']) ?>
+		</div>
+		<div class="col-md-4"></div>
+	</div>
+</div>
+
+ 
