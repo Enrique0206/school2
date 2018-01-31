@@ -24,34 +24,26 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <?= $cakeDescription ?>:
         <?= $this->fetch('title') ?>
     </title>
-    <?= $this->Html->meta('icon') ?>
+    <?= $this->Html->meta('icon') ?>   
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
-
+	<!--borramos los css de la base y cake y agregando helpers de bootstrap-->	
+	<?= $this->Html->css('bootstrap.min')?>
+	<?= $this->Html->css('bootstrap-theme.min')?>
+	<?= $this->Html->css('estilo')?>	
+	
+	<?= $this->Html->script('jquery-3.2.1.min')?>
+    <?= $this->Html->script('bootstrap.min')?>    
+	
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-            </li>
-        </ul>
-        <div class="top-bar-section">
-            <ul class="right">
-                <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
-                <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
-            </ul>
-        </div>
-    </nav>
+	<!--borramos el menu original-->
+	
     <?= $this->Flash->render() ?>
-    <div class="container clearfix">
-        <?= $this->fetch('content') ?>
-    </div>
-    <footer>
-    </footer>
+   
+    <?= $this->fetch('content') ?>
+   
 </body>
 </html>
