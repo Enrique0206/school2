@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Course[]|\Cake\Collection\CollectionInterface $courses
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<!--<nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Course'), ['action' => 'add']) ?></li>
@@ -13,9 +13,10 @@
         <li><?= $this->Html->link(__('List Scores'), ['controller' => 'Scores', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Score'), ['controller' => 'Scores', 'action' => 'add']) ?></li>
     </ul>
-</nav>
-<div class="courses index large-9 medium-8 columns content">
-    <h3><?= __('Asignaturas') ?></h3>
+</nav>-->
+
+<div class="container-fluid">
+    <h3><?= __('ASIGNATURAS') ?></h3>
 	<div class="table-responsive">
 		<table class="table">
 			<thead>

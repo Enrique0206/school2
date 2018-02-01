@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Boss $boss
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<!--<nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
@@ -17,7 +17,7 @@
         <li><?= $this->Html->link(__('List Students'), ['controller' => 'Students', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Student'), ['controller' => 'Students', 'action' => 'add']) ?></li>
     </ul>
-</nav>
+</nav>-->
 
 <div class="container">
 	<div class="row">

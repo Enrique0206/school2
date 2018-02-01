@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Student $student
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<!--<nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
@@ -21,14 +21,14 @@
         <li><?= $this->Html->link(__('List Scores'), ['controller' => 'Scores', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Score'), ['controller' => 'Scores', 'action' => 'add']) ?></li>
     </ul>
-</nav>
+</nav>-->
 
 <div class="container">
 	<div class="row">
 		<div class="col-md-6">
 			<?= $this->Form->create($student) ?>
 			<fieldset>
-				<legend><?= __('Edit Student') ?></legend>
+				<legend><?= __('Editar estudiantes') ?></legend>
 				<?php
 					echo $this->Form->control('name', ['class' => 'form-control']);
 					echo $this->Form->control('code', ['class' => 'form-control']);

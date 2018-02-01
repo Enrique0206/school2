@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Employee $employee
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<!--<nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
@@ -17,14 +17,14 @@
         <li><?= $this->Html->link(__('List Inscriptions'), ['controller' => 'Inscriptions', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Inscription'), ['controller' => 'Inscriptions', 'action' => 'add']) ?></li>
     </ul>
-</nav>
+</nav>-->
 
 <div class="container">
 	<div class="row">
 		<div class="col-md-6">
 			<?= $this->Form->create($employee) ?>
 			<fieldset>
-				<legend><?= __('Edit Employee') ?></legend>
+				<legend><?= __('Editar Empleados') ?></legend>
 				<?php
 					echo $this->Form->control('name', ['class' => 'form-control']);
 					echo $this->Form->control('code', ['class' => 'form-control']);

@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Student[]|\Cake\Collection\CollectionInterface $students
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<!--<nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Student'), ['action' => 'add']) ?></li>
@@ -15,10 +15,10 @@
         <li><?= $this->Html->link(__('List Scores'), ['controller' => 'Scores', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Score'), ['controller' => 'Scores', 'action' => 'add']) ?></li>
     </ul>
-</nav>
+</nav>-->
 
 <div class="container-fluid">
-    <h3><?= __('Estudiantes') ?></h3>
+    <h3><?= __('ESTUDIANTES') ?></h3>
 	<div class="table-responsive">
 		<table class="table">
         <thead>

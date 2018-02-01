@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Inscription $inscription
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<!--<nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Inscription'), ['action' => 'edit', $inscription->id]) ?> </li>
@@ -18,7 +18,7 @@
         <li><?= $this->Html->link(__('List Employees'), ['controller' => 'Employees', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Employee'), ['controller' => 'Employees', 'action' => 'add']) ?> </li>
     </ul>
-</nav>
+</nav>-->
 
 <div class="container-fluid">
     <h3><?= h($inscription->id) ?></h3>

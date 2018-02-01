@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Inscription[]|\Cake\Collection\CollectionInterface $inscriptions
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<!--<nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Inscription'), ['action' => 'add']) ?></li>
@@ -15,7 +15,7 @@
         <li><?= $this->Html->link(__('List Employees'), ['controller' => 'Employees', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Employee'), ['controller' => 'Employees', 'action' => 'add']) ?></li>
     </ul>
-</nav>
+</nav>-->
 
 <div class="container">
     <h3><?= __('INSCRIPCIONES') ?></h3>

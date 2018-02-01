@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Score $score
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<!--<nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
@@ -19,13 +19,14 @@
         <li><?= $this->Html->link(__('List Courses'), ['controller' => 'Courses', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Course'), ['controller' => 'Courses', 'action' => 'add']) ?></li>
     </ul>
-</nav>
+</nav>-->
+		
 <div class="container">
 	<div class="row">
 		<div class="col-md-6">
 			<?= $this->Form->create($score) ?>
 			<fieldset>
-				<legend><?= __('Edit Score') ?></legend>
+				<legend><?= __('Editar Calificaciones') ?></legend>
 				<?php
 					echo $this->Form->control('note1', ['class' => 'form-control']);
 					echo $this->Form->control('note2', ['class' => 'form-control']);

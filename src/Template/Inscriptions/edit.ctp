@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Inscription $inscription
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<!--<nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
@@ -21,14 +21,14 @@
         <li><?= $this->Html->link(__('List Employees'), ['controller' => 'Employees', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Employee'), ['controller' => 'Employees', 'action' => 'add']) ?></li>
     </ul>
-</nav>
+</nav>-->
 
 <div class="container">
 	<div class="row">
 		<div class="col-md-6">	
 			<?= $this->Form->create($inscription) ?>
 			<fieldset>
-				<legend><?= __('Edit Inscription') ?></legend>
+				<legend><?= __('Editar Inscripcion') ?></legend>
 				<?php
 					echo $this->Form->control('registration', ['class' => 'form-control']);
 					echo $this->Form->control('cost', ['class' => 'form-control']);
