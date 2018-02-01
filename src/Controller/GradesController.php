@@ -18,6 +18,9 @@ class GradesController extends AppController
      *
      * @return \Cake\Http\Response|void
      */
+	
+	var $paginate = array('limit' =>5, 'order' => array('id'));
+	
     public function index()
     {
         $grades = $this->paginate($this->Grades);

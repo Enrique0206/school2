@@ -17,7 +17,10 @@ class InscriptionsController extends AppController
      * Index method
      *
      * @return \Cake\Http\Response|void
-     */
+     */	
+	
+	var $paginate = array('limit' =>5, 'order' => array('id'));
+	
     public function index()
     {
         $this->paginate = [
