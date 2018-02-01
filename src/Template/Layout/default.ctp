@@ -49,17 +49,20 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 				  	</button>
-				  	<a class="navbar-brand" href="#">SISTEM</a>
+				  	<a class="navbar-brand" href="#"></a>
 				</div>	
 				<!-- menu desplegable movil-->
 				<!--items menu-->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li><?= $this->Html->link(__('MENU'), ['controller' => 'Home', 'action' => 'index'], ['class' => 'items'])?></li>	
+						<li><?= $this->Html->link(__('INICIO'), ['controller' => 'Home', 'action' => 'index'], ['class' => 'items'])?></li>	
 						<li><?= $this->Html->link('APODERADOS', ['controller' => 'Bosses', 'action' => 'index'], ['class' => 'items']) ?></li>						
 					    <li><?= $this->Html->link('ESTUDIANTES', ['controller' => 'Students', 'action' => 'index'], ['class' => 'items']) ?></li>
-						<li><?= $this->Html->link('CURSOS', ['controller' => 'Courses', 'action' => 'index'], ['class' => 'items']) ?></li>
-						<li><a class="items" href="#">NOTAS</a></li>
+						<li><?= $this->Html->link('ASIGNATURAS', ['controller' => 'Courses', 'action' => 'index'], ['class' => 'items']) ?></li>
+						<li><?= $this->Html->link('EMPLEADOS', ['controller' => 'Employees', 'action' => 'index'], ['class' => 'items']) ?></li>
+						<li><?= $this->Html->link('CALIFICACIONES', ['controller' => 'Scores', 'action' => 'index'], ['class' => 'items']) ?></li>
+						<li><?= $this->Html->link('GRADO ESCOLAR', ['controller' => 'Grades', 'action' => 'index'], ['class' => 'items']) ?></li>
+						<li><?= $this->Html->link('INSCRIPCIONES', ['controller' => 'Inscriptions', 'action' => 'index'], ['class' => 'items']) ?></li>
 					  </ul>  
 
 					  <ul class="nav navbar-nav navbar-right">

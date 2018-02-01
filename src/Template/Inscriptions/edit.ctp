@@ -22,19 +22,35 @@
         <li><?= $this->Html->link(__('New Employee'), ['controller' => 'Employees', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="inscriptions form large-9 medium-8 columns content">
-    <?= $this->Form->create($inscription) ?>
-    <fieldset>
-        <legend><?= __('Edit Inscription') ?></legend>
-        <?php
-            echo $this->Form->control('registration');
-            echo $this->Form->control('cost');
-            echo $this->Form->control('level');
-            echo $this->Form->control('grade_id', ['options' => $grades]);
-            echo $this->Form->control('student_id', ['options' => $students]);
-            echo $this->Form->control('employee_id', ['options' => $employees]);
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">	
+			<?= $this->Form->create($inscription) ?>
+			<fieldset>
+				<legend><?= __('Edit Inscription') ?></legend>
+				<?php
+					echo $this->Form->control('registration', ['class' => 'form-control']);
+					echo $this->Form->control('cost', ['class' => 'form-control']);
+					echo $this->Form->control('level', ['class' => 'form-control']);
+					echo $this->Form->control('grade_id', ['class' => 'form-control'], ['options' => $grades]);
+					echo $this->Form->control('student_id', ['class' => 'form-control'], ['options' => $students]);
+					echo $this->Form->control('employee_id', ['class' => 'form-control'], ['options' => $employees]);
+				?>
+			</fieldset>
+		</div>
+	</div> 	
+</div>
+
+<div class="container" style="margin-top: 20px">
+	<div class="row">
+		<div class="col-md-4">
+			<?= $this->Form->button(__('Guardar'), ['class' => 'btn btn-success'], ['action' => 'index']) ?>
+			<?= $this->Form->end() ?>
+		</div>		
+		<div class="col-md-4">
+			<?= $this->Html->link(__('regresar'), ['action' => 'index'], ['class' => 'btn btn-info']) ?>
+		</div>
+		<div class="col-md-4"></div>
+	</div>
 </div>

@@ -16,7 +16,8 @@
         <li><?= $this->Html->link(__('New Score'), ['controller' => 'Scores', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="students index large-9 medium-8 columns content">
+
+<div class="container-fluid">
     <h3><?= __('Estudiantes') ?></h3>
 	<div class="table-responsive">
 		<table class="table">

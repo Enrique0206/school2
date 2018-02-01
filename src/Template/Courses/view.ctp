@@ -17,26 +17,39 @@
         <li><?= $this->Html->link(__('New Score'), ['controller' => 'Scores', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
-<div class="courses view large-9 medium-8 columns content">
-    <h3><?= h($course->name) ?></h3>
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Name') ?></th>
-            <td><?= h($course->name) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Grade') ?></th>
-            <td><?= $course->has('grade') ? $this->Html->link($course->grade->id, ['controller' => 'Grades', 'action' => 'view', $course->grade->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($course->id) ?></td>
-        </tr>
-    </table>
-    <div class="related">
-        <h4><?= __('Related Scores') ?></h4>
+<div class="container-fluid">
+	<div class="container">
+		<h3><?= h($course->name) ?></h3>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="table-responsive">
+					<table class="table">
+						<tr>
+							<th scope="row"><?= __('Name') ?></th>
+							<td><?= h($course->name) ?></td>
+						</tr>
+						<tr>
+							<th scope="row"><?= __('Grade') ?></th>
+							<td><?= $course->has('grade') ? $this->Html->link($course->grade->id, ['controller' => 'Grades', 'action' => 'view', $course->grade->id]) : '' ?></td>
+						</tr>
+						<tr>
+							<th scope="row"><?= __('Id') ?></th>
+							<td><?= $this->Number->format($course->id) ?></td>
+						</tr>
+					</table>
+				</div>
+			</div>	
+			<div class="col-md-4"></div>
+			<div class="col-md-4" style="width: 100px; height: 100px; background:#cccccc; margin-left: 15px"><img src="">curso</div>
+		</div>
+	</div>	
+			
+	
+    <div class="container-fluid">
+        <h4><?= __('Relacion de Notas') ?></h4>
+		<div class="table-responsive">
         <?php if (!empty($course->scores)): ?>
-        <table cellpadding="0" cellspacing="0">
+        <table class="table">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Note1') ?></th>
@@ -57,13 +70,24 @@
                 <td><?= h($scores->student_id) ?></td>
                 <td><?= h($scores->course_id) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Scores', 'action' => 'view', $scores->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Scores', 'action' => 'edit', $scores->id]) ?>
+                    <?= $this->Html->link(__('View'), ['controller' => 'Scores', 'action' => 'view', $scores->id], ['class' => 'btn btn-success']) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'Scores', 'action' => 'edit', $scores->id], ['class' => 'btn btn-success']) ?>
                     <?= $this->Form->postLink(__('Delete'), ['controller' => 'Scores', 'action' => 'delete', $scores->id], ['confirm' => __('Are you sure you want to delete # {0}?', $scores->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
         </table>
         <?php endif; ?>
+		</div>
     </div>
+	
+	<div class="container" style="margin-top: 20px">
+		<div class="row">			
+			<div class="col-md-4">
+				<?= $this->Html->link(__('regresar'), ['action' => 'index'], ['class' => 'btn btn-info']) ?>
+			</div>
+			<div class="col-md-4"></div>
+			<div class="col-md-4"></div>
+		</div>
+	</div>
 </div>

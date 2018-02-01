@@ -20,19 +20,34 @@
         <li><?= $this->Html->link(__('New Course'), ['controller' => 'Courses', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="scores form large-9 medium-8 columns content">
-    <?= $this->Form->create($score) ?>
-    <fieldset>
-        <legend><?= __('Edit Score') ?></legend>
-        <?php
-            echo $this->Form->control('note1');
-            echo $this->Form->control('note2');
-            echo $this->Form->control('note3');
-            echo $this->Form->control('note4');
-            echo $this->Form->control('student_id', ['options' => $students]);
-            echo $this->Form->control('course_id', ['options' => $courses]);
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<?= $this->Form->create($score) ?>
+			<fieldset>
+				<legend><?= __('Edit Score') ?></legend>
+				<?php
+					echo $this->Form->control('note1', ['class' => 'form-control']);
+					echo $this->Form->control('note2', ['class' => 'form-control']);
+					echo $this->Form->control('note3', ['class' => 'form-control']);
+					echo $this->Form->control('note4', ['class' => 'form-control']);
+					echo $this->Form->control('student_id',['class' => 'form-control'], ['options' => $students]);
+					echo $this->Form->control('course_id', ['class' => 'form-control'], ['options' => $courses]);
+				?>
+			</fieldset>
+		</div>
+	</div>				
+</div>
+
+<div class="container" style="margin-top: 20px">
+	<div class="row">
+		<div class="col-md-4">
+			<?= $this->Form->button(__('Guardar'), ['class' => 'btn btn-success'], ['action' => 'index']) ?>
+			<?= $this->Form->end() ?>
+		</div>		
+		<div class="col-md-4">
+			<?= $this->Html->link(__('regresar'), ['action' => 'index'], ['class' => 'btn btn-info']) ?>
+		</div>
+		<div class="col-md-4"></div>
+	</div>
 </div>

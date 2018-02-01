@@ -19,42 +19,56 @@
         <li><?= $this->Html->link(__('New Score'), ['controller' => 'Scores', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
-<div class="students view large-9 medium-8 columns content">
-    <h3><?= h($student->name) ?></h3>
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Name') ?></th>
-            <td><?= h($student->name) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Code') ?></th>
-            <td><?= h($student->code) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Address') ?></th>
-            <td><?= h($student->address) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Dni') ?></th>
-            <td><?= h($student->dni) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Sexo') ?></th>
-            <td><?= h($student->sexo) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Boss') ?></th>
-            <td><?= $student->has('boss') ? $this->Html->link($student->boss->name, ['controller' => 'Bosses', 'action' => 'view', $student->boss->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($student->id) ?></td>
-        </tr>
-    </table>
-    <div class="related">
-        <h4><?= __('Related Inscriptions') ?></h4>
+
+<div class="container-fluid">
+	<div class="container">
+		<h3><?= h($student->name) ?></h3>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="table-responsive">
+					<table class="table">
+						<tr>
+							<th scope="row"><?= __('Name') ?></th>
+							<td><?= h($student->name) ?></td>
+						</tr>
+						<tr>
+							<th scope="row"><?= __('Code') ?></th>
+							<td><?= h($student->code) ?></td>
+						</tr>
+						<tr>
+							<th scope="row"><?= __('Address') ?></th>
+							<td><?= h($student->address) ?></td>
+						</tr>
+						<tr>
+							<th scope="row"><?= __('Dni') ?></th>
+							<td><?= h($student->dni) ?></td>
+						</tr>
+						<tr>
+							<th scope="row"><?= __('Sexo') ?></th>
+							<td><?= h($student->sexo) ?></td>
+						</tr>
+						<tr>
+							<th scope="row"><?= __('Boss') ?></th>
+							<td><?= $student->has('boss') ? $this->Html->link($student->boss->name, ['controller' => 'Bosses', 'action' => 'view', $student->boss->id]) : '' ?></td>
+						</tr>
+						<tr>
+							<th scope="row"><?= __('Id') ?></th>
+							<td><?= $this->Number->format($student->id) ?></td>
+						</tr>
+					</table>
+				</div>	
+			</div>
+			<div class="col-md-4"></div>
+			<div class="col-md-4" style="width: 100px; height: 100px; background:#cccccc; margin-left: 15px"><img src="">alumno</div>
+			
+		</div>
+	</div>	
+		
+    <div class="container-fluid">
+        <h4><?= __('Alumnos por apoderado') ?></h4>
+		<div class="table-responsive">
         <?php if (!empty($student->inscriptions)): ?>
-        <table cellpadding="0" cellspacing="0">
+        <table class="table">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Registration') ?></th>
@@ -83,11 +97,14 @@
             <?php endforeach; ?>
         </table>
         <?php endif; ?>
+		</div>
     </div>
-    <div class="related">
-        <h4><?= __('Related Scores') ?></h4>
+	
+    <div class="container-fluid">
+        <h4><?= __('Relacion de notas') ?></h4>
+		<div class="table-responsive">
         <?php if (!empty($student->scores)): ?>
-        <table cellpadding="0" cellspacing="0">
+			<table class="table">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Note1') ?></th>
@@ -108,13 +125,24 @@
                 <td><?= h($scores->student_id) ?></td>
                 <td><?= h($scores->course_id) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Scores', 'action' => 'view', $scores->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Scores', 'action' => 'edit', $scores->id]) ?>
+                    <?= $this->Html->link(__('View'), ['controller' => 'Scores', 'action' => 'view', $scores->id], ['class' => 'btn btn-success']) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'Scores', 'action' => 'edit', $scores->id], ['class' => 'btn btn-warning']) ?>
                     <?= $this->Form->postLink(__('Delete'), ['controller' => 'Scores', 'action' => 'delete', $scores->id], ['confirm' => __('Are you sure you want to delete # {0}?', $scores->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
         </table>
         <?php endif; ?>
+		</div>
     </div>
+	
+	<div class="container" style="margin-top: 20px">
+		<div class="row">			
+			<div class="col-md-4">
+				<?= $this->Html->link(__('regresar'), ['action' => 'index'], ['class' => 'btn btn-info']) ?>
+			</div>
+			<div class="col-md-4"></div>
+			<div class="col-md-4"></div>
+		</div>
+	</div>	
 </div>
