@@ -59,7 +59,7 @@
                 <th scope="col"><?= __('Address') ?></th>
                 <th scope="col"><?= __('Dni') ?></th>
                 <th scope="col"><?= __('Sexo') ?></th>
-                <th scope="col"><?= __('Boss Id') ?></th>
+                <!--<th scope="col"><?= __('Boss Id') ?></th>-->
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($boss->students as $students): ?>
@@ -70,7 +70,7 @@
                 <td><?= h($students->address) ?></td>
                 <td><?= h($students->dni) ?></td>
                 <td><?= h($students->sexo) ?></td>
-                <td><?= h($students->boss_id) ?></td>
+                <!--<td><?= h($students->boss_id) ?></td>-->
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Students', 'action' => 'view', $students->id], ['class' => 'btn btn-success']) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Students', 'action' => 'edit', $students->id], ['class' => 'btn btn-warning']) ?>

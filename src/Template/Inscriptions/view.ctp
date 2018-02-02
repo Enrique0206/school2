@@ -21,39 +21,45 @@
 </nav>-->
 
 <div class="container-fluid">
-    <h3><?= h($inscription->id) ?></h3>
-	<div class="table-responsive">
-		<table class="table">
-			<tr>
-				<th scope="row"><?= __('Level') ?></th>
-				<td><?= h($inscription->level) ?></td>
-			</tr>
-			<tr>
-				<th scope="row"><?= __('Grade') ?></th>
-				<td><?= $inscription->has('grade') ? $this->Html->link($inscription->grade->id, ['controller' => 'Grades', 'action' => 'view', $inscription->grade->id]) : '' ?></td>
-			</tr>
-			<tr>
-				<th scope="row"><?= __('Student') ?></th>
-				<td><?= $inscription->has('student') ? $this->Html->link($inscription->student->name, ['controller' => 'Students', 'action' => 'view', $inscription->student->id]) : '' ?></td>
-			</tr>
-			<tr>
-				<th scope="row"><?= __('Employee') ?></th>
-				<td><?= $inscription->has('employee') ? $this->Html->link($inscription->employee->name, ['controller' => 'Employees', 'action' => 'view', $inscription->employee->id]) : '' ?></td>
-			</tr>
-			<tr>
-				<th scope="row"><?= __('Id') ?></th>
-				<td><?= $this->Number->format($inscription->id) ?></td>
-			</tr>
-			<tr>
-				<th scope="row"><?= __('Cost') ?></th>
-				<td><?= $this->Number->format($inscription->cost) ?></td>
-			</tr>
-			<tr>
-				<th scope="row"><?= __('Registration') ?></th>
-				<td><?= h($inscription->registration) ?></td>
-			</tr>
-		</table>
-	</div>	
+	<div class="container">
+		<h3><?= h($inscription->id) ?></h3>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="table-responsive">
+					<table class="table">
+						<tr>
+							<th scope="row"><?= __('Level') ?></th>
+							<td><?= h($inscription->level) ?></td>
+						</tr>
+						<tr>
+							<th scope="row"><?= __('Grade') ?></th>
+							<td><?= $inscription->has('grade') ? $this->Html->link($inscription->grade->id, ['controller' => 'Grades', 'action' => 'view', $inscription->grade->id]) : '' ?></td>
+						</tr>
+						<tr>
+							<th scope="row"><?= __('Student') ?></th>
+							<td><?= $inscription->has('student') ? $this->Html->link($inscription->student->name, ['controller' => 'Students', 'action' => 'view', $inscription->student->id]) : '' ?></td>
+						</tr>
+						<tr>
+							<th scope="row"><?= __('Employee') ?></th>
+							<td><?= $inscription->has('employee') ? $this->Html->link($inscription->employee->name, ['controller' => 'Employees', 'action' => 'view', $inscription->employee->id]) : '' ?></td>
+						</tr>
+						<tr>
+							<th scope="row"><?= __('Id') ?></th>
+							<td><?= $this->Number->format($inscription->id) ?></td>
+						</tr>
+						<tr>
+							<th scope="row"><?= __('Cost') ?></th>
+							<td><?= $this->Number->format($inscription->cost) ?></td>
+						</tr>
+						<tr>
+							<th scope="row"><?= __('Registration') ?></th>
+							<td><?= h($inscription->registration) ?></td>
+						</tr>
+					</table>
+				</div>	
+			</div>	
+		</div>	
+	</div>
 </div>
 
 <div class="container" style="margin-top: 20px">

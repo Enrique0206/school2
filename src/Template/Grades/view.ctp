@@ -41,7 +41,7 @@
 				</div>	
 			</div>		
 			<div class="col-md-4"></div>
-			<div class="col-md-4" style="width: 100px; height: 100px; background:#cccccc; margin-left: 15px"><img src="">grado</div>
+			<div class="col-md-4"></div>			
 		</div>
 	</div>		
 	

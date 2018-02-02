@@ -65,7 +65,7 @@
 	</div>	
 		
     <div class="container-fluid">
-        <h4><?= __('Alumnos por apoderado') ?></h4>
+        <h4><?= __('Alumno por Tutor') ?></h4>
 		<div class="table-responsive">
         <?php if (!empty($student->inscriptions)): ?>
         <table class="table">
@@ -75,7 +75,7 @@
                 <th scope="col"><?= __('Cost') ?></th>
                 <th scope="col"><?= __('Level') ?></th>
                 <th scope="col"><?= __('Grade Id') ?></th>
-                <th scope="col"><?= __('Student Id') ?></th>
+                <!--<th scope="col"><?= __('Student Id') ?></th>-->
                 <th scope="col"><?= __('Employee Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -86,7 +86,7 @@
                 <td><?= h($inscriptions->cost) ?></td>
                 <td><?= h($inscriptions->level) ?></td>
                 <td><?= h($inscriptions->grade_id) ?></td>
-                <td><?= h($inscriptions->student_id) ?></td>
+                <!--<td><?= h($inscriptions->student_id) ?></td>-->
                 <td><?= h($inscriptions->employee_id) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Inscriptions', 'action' => 'view', $inscriptions->id]) ?>
@@ -111,7 +111,7 @@
                 <th scope="col"><?= __('Note2') ?></th>
                 <th scope="col"><?= __('Note3') ?></th>
                 <th scope="col"><?= __('Note4') ?></th>
-                <th scope="col"><?= __('Student Id') ?></th>
+                <!--<th scope="col"><?= __('Student Id') ?></th>-->
                 <th scope="col"><?= __('Course Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -122,7 +122,7 @@
                 <td><?= h($scores->note2) ?></td>
                 <td><?= h($scores->note3) ?></td>
                 <td><?= h($scores->note4) ?></td>
-                <td><?= h($scores->student_id) ?></td>
+                <!--<td><?= h($scores->student_id) ?></td>-->
                 <td><?= h($scores->course_id) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Scores', 'action' => 'view', $scores->id], ['class' => 'btn btn-success']) ?>
