@@ -32,7 +32,7 @@
 				<tr>
 					<td><?= $this->Number->format($course->id) ?></td>
 					<td><?= h($course->name) ?></td>
-					<td><?= $course->has('grade') ? $this->Html->link($course->grade->id, ['controller' => 'Grades', 'action' => 'view', $course->grade->id]) : '' ?></td>
+					<td><?= $course->has('grade') ? $this->Html->link($course->grade->section, ['controller' => 'Grades', 'action' => 'view', $course->grade->id]) : '' ?></td>
 					<td class="actions">
 						<?= $this->Html->link(__('View'), ['action' => 'view', $course->id], ['class' => 'btn btn-success']) ?>
 						<?= $this->Html->link(__('Edit'), ['action' => 'edit', $course->id], ['class' => 'btn btn-warning']) ?>

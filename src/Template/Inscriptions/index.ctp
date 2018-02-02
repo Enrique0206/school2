@@ -40,7 +40,7 @@
 					<td><?= h($inscription->registration) ?></td>
 					<td><?= $this->Number->format($inscription->cost) ?></td>
 					<td><?= h($inscription->level) ?></td>
-					<td><?= $inscription->has('grade') ? $this->Html->link($inscription->grade->id, ['controller' => 'Grades', 'action' => 'view', $inscription->grade->id]) : '' ?></td>
+					<td><?= $inscription->has('grade') ? $this->Html->link($inscription->grade->section, ['controller' => 'Grades', 'action' => 'view', $inscription->grade->id]) : '' ?></td>
 					<td><?= $inscription->has('student') ? $this->Html->link($inscription->student->name, ['controller' => 'Students', 'action' => 'view', $inscription->student->id]) : '' ?></td>
 					<td><?= $inscription->has('employee') ? $this->Html->link($inscription->employee->name, ['controller' => 'Employees', 'action' => 'view', $inscription->employee->id]) : '' ?></td>
 					<td class="actions">
