@@ -30,6 +30,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 	<?= $this->Html->css('bootstrap.min')?>
 	<?= $this->Html->css('bootstrap-theme.min')?>
 	<?= $this->Html->css('estilo')?>	
+	<?= $this->Html->css('estilo_img')?>
 	
 	<?= $this->Html->script('jquery-3.2.1.min')?>
     <?= $this->Html->script('bootstrap.min')?>    
@@ -74,7 +75,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 				<!--items menu-->
 			</div>
 		</nav>
-	<div class="container-fluid" style="height: 20px"></div>
+	
+	<div id="fondo" class="container-fluid"></div>
 		<div class="container">			
 				<?= $this->Flash->render() ?>
 
