@@ -43,6 +43,8 @@ class GradesTable extends Table
         $this->hasMany('Inscriptions', [
             'foreignKey' => 'grade_id'
         ]);
+		
+		$this->setDisplayField('section'); //esto permite como visualizar la option de course, como id o section
     }
 
     /**

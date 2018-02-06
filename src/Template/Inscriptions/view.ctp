@@ -33,7 +33,7 @@
 						</tr>
 						<tr>
 							<th scope="row"><?= __('Grade') ?></th>
-							<td><?= $inscription->has('grade') ? $this->Html->link($inscription->grade->id, ['controller' => 'Grades', 'action' => 'view', $inscription->grade->id]) : '' ?></td>
+							<td><?= $inscription->has('grade') ? $this->Html->link($inscription->grade->section, ['controller' => 'Grades', 'action' => 'view', $inscription->grade->id]) : '' ?></td>
 						</tr>
 						<tr>
 							<th scope="row"><?= __('Student') ?></th>

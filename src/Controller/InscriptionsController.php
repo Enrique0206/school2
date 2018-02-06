@@ -64,7 +64,7 @@ class InscriptionsController extends AppController
             }
             $this->Flash->error(__('The inscription could not be saved. Please, try again.'));
         }
-        $grades = $this->Inscriptions->Grades->find('list', ['limit' => 200]);
+        $grades = $this->Inscriptions->Grades->find('list', ['limit' => 200]);		
         $students = $this->Inscriptions->Students->find('list', ['limit' => 200]);
         $employees = $this->Inscriptions->Employees->find('list', ['limit' => 200]);
         $this->set(compact('inscription', 'grades', 'students', 'employees'));
